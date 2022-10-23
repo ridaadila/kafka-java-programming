@@ -1,6 +1,7 @@
 package kafka.producer;
 
 import org.apache.kafka.clients.producer.*;
+import org.apache.kafka.clients.producer.internals.DefaultPartitioner;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,6 +48,7 @@ public class ProducerCallback {
                     }
                 }
             });
+
 
             try {
                 Thread.sleep(1000);
